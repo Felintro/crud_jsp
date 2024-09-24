@@ -6,17 +6,6 @@
 
     <display-name>CRUD JSP</display-name>
 
-    <servlet>
-        <servlet-name>helloServlet</servlet-name>
-        <servlet-class>br.edu.feitep.crudjsp.servlets.HelloServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>helloServlet</servlet-name>
-        <url-pattern>/hello-servlet</url-pattern>
-        <url-pattern>*.asp</url-pattern>
-    </servlet-mapping>
-
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
