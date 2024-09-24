@@ -22,6 +22,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("action", "login");
         request.setAttribute("status", "ok");
         request.getRequestDispatcher("login.jsp").forward(request, response);
     }
@@ -44,6 +45,5 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("status", "erro-login");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
-
     }
 }
