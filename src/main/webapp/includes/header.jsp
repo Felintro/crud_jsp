@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
+<%
+    String nomeUsuario = (String) session.getAttribute("username");
+%>
+
 <html lang="pt-br">
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
@@ -18,4 +22,8 @@
         <div class="jumbotron bg-danger">
             <h1>Cadastro de despesas!</h1>
             <p>Exemplo de CRUD com JSP</p>
+            <% if(nomeUsuario != null) { %>
+            <p class="text-right">Usuário logado: <%= nomeUsuario %></p>
+            <% } %>
         </div>
+
